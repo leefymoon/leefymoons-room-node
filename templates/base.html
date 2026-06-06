@@ -1,0 +1,133 @@
+{% set topMarquee %}
+  explodes pancakes with mind // graphics page is leaving soon... // that fuckin bird that i hate
+{% endset %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="site-favicon.ico"/>
+    <base target="_blank" />
+    <title>leefymoon's room / {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div id="grid-container">
+      <header>
+        <img id="banner">
+        <div id="banner-creds"></div>
+      </header>
+      <div class="marquee">
+        <div class="marquee-content">
+          <p>{{ topMarquee }}</p>
+        </div>
+        <div class="marquee-content">
+          <p>{{ topMarquee }}</p>
+        </div>
+      </div>
+      <nav>
+        <button><a href="home" target="_self">home</a></button>
+        <button><a href="about" target="_self">about</a></button>
+        <button><a href="blog" target="_self">blog</a></button>
+        <button><a href="graphics" target="_self">graphics</a></button>
+        <button><a href="resources" target="_self">resources</a></button>
+        <button><a href="shrines" target="_self">shrines</a></button>
+      </nav>
+      <aside>
+        <div class="aside-container">
+          {% block firstAside %}
+          <div class="aside-box">
+            <h3>did you know?</h3>
+            <p id="fact-text">default</p>
+            <script src="js/facts.js"></script>
+          </div>
+          {% endblock %}
+          <div class="aside-box">
+            <h3>socials</h3>
+            <span
+              ><a href="https://crosstalk.im/profile/+leefymoon"
+                ><img
+                src="images/wlm-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="https://spacehey.com/leefymoon"
+              ><img
+                src="images/spacehey-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="https://bsky.app/profile/leefymoons-room.net"
+                ><img
+                src="images/bsky-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a rel="me" href="https://social.fort1nd.com/@leefyexplodes"
+                ><img
+                src="images/forums-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="https://www.tumblr.com/blog/leefymoon"
+                ><img
+                src="images/tumblr-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="https://discordapp.com/users/484765590511419403"
+                ><img
+                src="images/discord-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="https://pin.it/2VPmTVtIq"
+                ><img
+                src="images/pinterest-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="https://steamcommunity.com/profiles/76561199156330743/"
+                ><img
+                src="images/steam-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+            <span
+              ><a href="mailto://leefyexplodes@leefymoons-room.net"
+                ><img
+                src="images/email-icon.png"
+                width=""
+                style="image-rendering: pixelated" /></a
+            ></span>
+          </div>
+        <div class="aside-box">
+          <h3>join the server!</h3>
+          <p>join the discord server to get site updates, participate in game nights, and more!</p>
+          <button><a href="https://discord.gg/9EDwqsBf6G">join!</a></button>
+        </div>
+        </div>
+      </aside>
+      <main>
+        {% block mainContent %}
+          <article>
+            <h1>default</h1>
+            <p>this is a placeholder.</p>
+          </article>
+        {% endblock %}
+      </main>
+      <footer>
+        <p>site made by yours truly :]</p>
+      </footer>
+    </div>
+    <script src="js/randomBanner.js"></script>
+    <script src="js/explodeClick.js"></script>
+    <script src="js/pwease.js"></script>
+  </body>
+</html>

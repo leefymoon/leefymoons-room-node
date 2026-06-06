@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "npm start",
+    "dev": "nodemon -e js,json,html,env,css app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

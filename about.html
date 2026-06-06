@@ -1,0 +1,90 @@
+{% extends "templates/base.html" %}
+{% block title %}about{% endblock %}
+
+{% block firstAside %}
+    {{ super() }}
+{% endblock %}
+
+{% block mainContent %}
+<article id="about-article">
+    <h1>who art thou?</h1>
+    <div class="about-leefy">
+        <img src="images/leefyPFP.png" width="175px">
+        <span>
+            <h2>it me &lt;3</h2>
+            <p>hey there! it's me leefy! i am sixteen years old, so <b>please</b> do not be a creep! along with my
+                <s>hatred</s> love for web design, i also love other things like tech, art, gaming, and more! when i'm
+                not working on my site you'll often times find me talking with my friends, hanging out in the crosstalk
+                discord, playing games, or listening to music!</p>
+        </span>
+    </div>
+    <div class="about-subinfo-container">
+        <div class="about-subinfo">
+            <h3>my friends!</h3>
+            <p>my irls (o, h, m, j, g, s, g, l), jarhead, jess, ryni, epicness, preloading, clara, tox, random,
+                tommyD, nick, li, invis, redtech, lloyd, savy</p>
+        </div>
+        <div class="about-subinfo" style="overflow-y: scroll;">
+            <h3>webrings</h3>
+            <center>
+                <map name="noaimini7">
+                    <area href="https://baccyflap.com/noai" shape="rect" coords="15,3,72,27" target="_blank"
+                        alt="no ai webring" title="no ai webring">
+                    <area href="https://baccyflap.com/noai/?prv&s=lrm" target="_top" shape="rect" coords="3,6,12,27"
+                        alt="previous" title="previous">
+                    <area href="https://baccyflap.com/noai/?nxt&s=lrm" target="_top" shape="rect" coords="75,6,84,27"
+                        alt="next" title="next">
+                </map>
+                <img style="margin-top: 10px!important;" usemap="#noaimini7"
+                    src="https://baccyflap.com/noai/miniwidget7.gif"
+                    alt="a green-on-black grid with illuminated parts that spell out NO AI / WEBRING and two animated green arrows pointing left and right, bobbing up and down">
+                <!-- CDRING START -->
+                <div id='cdr'>
+                    <script type="text/javascript"
+                        src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
+                    <script type="text/javascript"
+                        src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
+                </div>
+                <!-- CDRING END -->
+            </center>
+        </div>
+        <div class="about-subinfo">
+            <h3>favorite things</h3>
+            <p>taco bell, mp3 players, the color #8a2be2, cds n dvds, staying up late, root beer, singing, my dogs, the
+                letter h, haikuOS, pinterest, frogs, sleeping</p>
+        </div>
+    </div>
+    <small><a href="onehundquestions.html" style="color: #8c8c8c;" target="_self">read my answers to 100 questions?
+            >></a></small>
+</article>
+<article>
+    <h1>music &lt;3</h1>
+            <p>if it isn't clear enough, i LOVE music! music alone has solely helped me through my journeys in life.
+                some of my favorite artists include 311, twenty one pilots, fall out boy, dave matthews band, pierce the
+                veil, my chemical romance, system of a down, static-x, and more!! here's my weekly albums! (sourced from my lastfm)
+            </p>
+            <div class="album-container" id="album-container">
+                <script src="/js/topAlbumsLastfm.js"></script>
+            </div>
+</article>
+<article>
+    <h1>games</h1>
+    <p> i mainly play on pc, but i also play on my switch and xbox 360 ^^ you can add my steam <a
+            href="https://steamcommunity.com/profiles/76561199156330743/">here</a> and my xbox gamertag is
+        <b>leefymoon2173</b> if you're down to play any games! some games i love are minecraft, overwatch, portal 1 and
+        2, skate 3, splatoon 2 and 3, forza horizon 1, mirror's edge catalyst, and more!</p>
+</article>
+<article>
+    <h1>kandi</h1>
+    <p>i make kandi! i've been making kandi since around 2021. here's some of my kandi! ^^</p>
+    <div class="kandi-container">
+        <img src="images/kandi1.jpg">
+        <img src="images/kandi2.jpg">
+        <img src="images/kandi3.jpg">
+        <img src="images/kandi4.jpg">
+        <img src="images/kandi5.jpg">
+        <img src="images/kandi6.jpg">
+        <img src="images/kandi7.jpg">
+    </div>
+</article>
+{% endblock %}
