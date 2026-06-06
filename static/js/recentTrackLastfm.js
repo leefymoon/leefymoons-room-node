@@ -1,4 +1,4 @@
-async function getTopAlbums() {
+async function getRecentTrack() {
     try {
         //calls endpoint that has lastfm data
         const response = await fetch('/lastfm/recenttrack');
@@ -9,23 +9,24 @@ async function getTopAlbums() {
         const data = await response.json();
         const recentTrack = data.recenttracks.track;
 
-        for (let i = 0; i < topAlbums.length; i++) {
-            const albumElement = document.createElement('div');
-            const album = document.createElement('p');
+        for (let i = 0; i < recentTrack.length; i++) {
+          
+            console.log(data);
+            console.log(recentTrack[i].name);
+            console.log(recentTrack[i].artist['#text']);
+            console.log(recentTrack[i].date['#text']);
+            
             const artist = document.createElement('p');
+            const song = document.createElement('p');
             const albumCover = document.createElement('img');
 
-            albumElement.classList.add('album-item');
+            albumCover.setAttribute("src", recentTrack[i].image.find(img => img.size === "large")?.['#text']);
+            albumCover.style.width = '75px';
+            song.textContent = recentTrack[i].name;
+            artist.textContent = recentTrack[i].artist['#text'];
 
-            albumCover.setAttribute("src", topAlbums[i].image.find(img => img.size === "large")?.['#text']);
-            albumCover.style.width = '150px';
-
-            album.textContent = topAlbums[i].name;
-            artist.textContent = topAlbums[i].artist.name;
-
-            albumElement.append(albumCover, album, artist);
-
-            document.getElementById('album-container').append(albumElement);
+            document.getElementById('lastfm').append(albumCover);
+            document.getElementById('track-info').append(artist, song);
         }
 
 
@@ -36,4 +37,4 @@ async function getTopAlbums() {
 
 }
 
-getTopAlbums();
+getRecentTrack();

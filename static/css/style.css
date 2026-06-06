@@ -585,10 +585,13 @@ article#whats-new {
     box-shadow: inset 0px 0px 15px 5px #000000;
     padding: 10px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 175px;
+    height: fit-content;
+}
+
+.lastfm img {
+    margin-right: 5px;
 }
 
 #about-article {
