@@ -25,7 +25,7 @@ async function getRecentTrack() {
             song.textContent = recentTrack[i].name;
             artist.textContent = recentTrack[i].artist['#text'];
 
-            document.getElementById('lastfm').append(albumCover);
+            document.getElementById('lastfm').prepend(albumCover);
             document.getElementById('track-info').append(artist, song);
         }
 
