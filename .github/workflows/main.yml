@@ -1,0 +1,17 @@
+name: Run Script
+on: [push]
+
+jobs:
+  run-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run script with secret
+        # This maps the GitHub secret to an OS environment variable
+        env:
+          API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          USERNAME: ${{ secrets.LASTFM_USERNAME }}
+        run: |
+          node app.js
