@@ -1,0 +1,13 @@
+.title {
+    color: green;
+    font-style: italic;
+}
+#mainDiv{
+    font-family: cursive;
+    font-size: 500pt;
+    display: none;
+    margin: 0 0 0 0;
+}
+html::-webkit-scrollbar {
+    display: none;
+}

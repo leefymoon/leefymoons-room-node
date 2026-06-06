@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>experimentsssss</title>
+        <style>
+            body {
+                background: #361056;
+            }
+
+            p {
+                color: #ffffff;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                margin: 3px;
+            }
+
+            #images {
+                width: 30%;
+            }
+
+            #copied {
+                background-color: #9effc5;
+                width: fit-content;
+                color: #0f6b33;
+                padding: 2px;
+                display: none;
+            }
+
+            textarea {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <p>to get the code, click on any button of your choice to get the button code!</p>
+        <p>enter your fort.social user here (without the @) to link to your profile, or leave it blank to link to fort.ind!</p>
+        <input type="text" name="user" id="user">
+        <br>
+        <br>
+        <textarea id="code-box" rows="6" cols="40" readonly>code will appear here, click a button!</textarea>
+        <!--replace these with button images-->
+        <!--make sure to change the ids accordingly (see script comments)-->
+        <div id="images">
+            <img src="images/ogFortButton.png" id="og" onclick="copyText('og')">
+            <img src="images/rainbowFortButton.png" id="rainbow" onclick="copyText('rainbow')">
+            <img src="images/transFortButton.png" id="trans" onclick="copyText('trans')">
+            <img src="images/biFortButton.png" id="bi" onclick="copyText('bi')">
+            <img src="images/lesbianFortButton.png" id="lesbian" onclick="copyText('lesbian')">
+            <img src="images/panFortButton.png" id="pan" onclick="copyText('pan')">
+            <img src="images/aceFortButton.png" id="ace" onclick="copyText('ace')">
+            <img src="images/aroFortButton.png" id="aro" onclick="copyText('aro')">
+            <img src="images/aroaceFortButton.png" id="aroace" onclick="copyText('aroace')">
+            <img src="images/abroFortButton.png" id="abro" onclick="copyText('abro')">
+            <img src="images/genderfluidFortButton.png" id="genderfluid" onclick="copyText('genderfluid')">
+            <img src="images/nonbinaryFortButton.png" id="nonbinary" onclick="copyText('nonbinary')">
+            <img src="images/polyFortButton.png" id="poly" onclick="copyText('poly')">
+            <img src="images/pluralFortButton.png" id="plural" onclick="copyText('plural')">
+        </div>
+        <script>
+        const codeBox = document.getElementById('code-box');
+
+        function copyText(id) {
+            //any text in input field is stored in username variable when any button is clicked
+            const username = document.getElementById("user").value;
+            //stores function parameter of clicked button in variable buttonId
+            //!! make sure button names MATCH the id !! 
+            /*(ex. if button image is named fortButtonLesbian.png, 
+            make sure the id of that image is "Lesbian")*/
+            const buttonId = document.getElementById("id");
+            
+            //perfect way of implementing this i'm sure of it...
+            //logic is: if the person doesn't put a user in, 
+            //they *probably* just want to link to fort.ind...
+            //but otherwise it takes the user (assuming it's valid)
+            //and changes the text box value
+            if(username === '') {
+                codeBox.value = `<a href='https://fort1nd.com' target='_blank'><img src='https://leefymoons-room.net/fort1nd/images/${id}FortButton.png'></a>`;
+            }
+            else {
+                codeBox.value = `<a href='https://social.fort1nd.com/@${username}' target='_blank'><img src='https://leefymoons-room.net/fort1nd/images/${id}FortButton.png'></a>`;
+            }
+        }
+        //script made by caffeinated leefy (leefymoons-room.net) at 5am :3
+        </script>
+    </body>
+</html>

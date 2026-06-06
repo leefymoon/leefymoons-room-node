@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+            height: vh;
+        }
+
+        @font-face {
+            font-family: "Comic Sans";
+            src: url("COMIC.TTF");
+        }
+
+      #h-container {
+        width: fit-content;
+        height: fit-content;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+      }
+
+      #first-straight-line {
+        background-color: blue;
+        height: 800px;
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #middle-line {
+        background-color: aqua;
+        z-index: 2;
+        height: 300p;
+        width: 25%;
+      }
+
+      #second-straight-line {
+        background-color: blue;
+        z-index: 1;
+        height: 800px;
+        width: 300px;
+      }
+
+      p {
+        width: fit-content;
+        margin: 0;
+        color: white;
+        font-family: "Comic Sans";
+        border: 1px #000 solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="h-container">
+      <div id="first-straight-line"></div>
+      <div id="middle-line"></div>
+      <div id="second-straight-line"></div>
+    </div>
+    <script>
+      var hSongLyrics = "Letter H Two straight lines and a line in the middle That's an H Two straight lines and a line in the middle That's an H (There's a homosexual) Letter H is hip Letter H is hot H can fill a hole like a hotdog with a lot Hive is a home for happy humming bees H says hello and always says please Two straight lines and a line in the middle That's an H Two straight lines and a line in the middle That's an H (There's a homosexual) Hi there little H Let's draw you now too You start with a line and you're nearly through You need a little arch across and then down Little H is the letter that you have now Two straight lines and a line in the middle That's an H Two straight lines and a line in the middle That's an H The letter H H makes the 'huh' sound I'm sure that you've heard 'Huh' is a sound that starts lots of words H is in hit, hot, help and hold Have, hat, hive, heel H is in them all Letter H Two straight lines and a line in the middle That's an H The letter H Two straight lines and a line in the middle That's an H The letter H Two straight lines and a line in the middle That's an H The letter H Two straight lines and a line in the middle That's an H The letter H";
+      var hArray = hSongLyrics.split(" ");
+
+      var parentEl = document.getElementById("first-straight-line");
+
+      for (var i = 0; i < hArray.length; i++) {
+        var textElement = document.createElement("p");
+        textElement.innerText = hArray[i];
+        parentEl.appendChild(textElement);
+      }
+    </script>
+  </body>
+</html>

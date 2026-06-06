@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="site-favicon.ico">
+  <base target="_blank">
+  <title>leefymoon's room / blog</title>
+</head>
+
+<body>
+  <div id="grid-container">
+    <header>
+      <img src="banner1.png" id="banner">
+      <div id="banner-creds"></div>
+    </header>
+    <div class="marquee">
+      <div class="marquee-content">
+        <p>
+          javascript you are my ENEMY // graphics page is leaving soon... // that fuckin bird that i hate //
+        </p>
+      </div>
+      <div class="marquee-content">
+        <p>
+          javascript you are my ENEMY // graphics page is leaving soon... // that fuckin bird that i hate //
+        </p>
+      </div>
+    </div>
+    <nav>
+      <button><a href="home.html" target="_self">home</a></button>
+      <button><a href="about.html" target="_self">about</a></button>
+      <button><a href="blog.html" target="_self">blog</a></button>
+      <button><a href="graphics.html" target="_self">graphics</a></button>
+      <button><a href="resources.html" target="_self">resources</a></button>
+      <button><a href="shrines.html" target="_self">shrines</a></button>
+    </nav>
+    <aside>
+      <div class="aside-container">
+        <div class="aside-box" style="position: relative;">
+          <h3>did you know?</h3>
+            <p id="fact-text"></p>
+            <script>
+              var facts = [
+                "this site was founded back in the summer of 2023 on neocities! i was in my scene phase and i had just started learning html so it didn't look good...",
+                "i have 2 dogs! we got them when they were puppies and that was when i was 8! they're black labs and so adorable :3",
+                "i like going to the gym! i've never really been too athetically inclined, but i like going to the gym and working off stress :]",
+                "haha leefy is actually really mean and evil and HATES joy and kindness >:3 (wait what, who put this in here?! ryni!!)",
+                "i love playing overwatch! i main orisa, echo, and illari! often times you'll find me playing with my friends :3 (shoutout to tommy, skitter, kable, and greel!!)",
+                "i have a surface rt that is called the BBQRT. i dropped the flash drive i was using to install raspiOS into my BBQ sauce and uh. yeah."
+              ];
+
+              activeFact = Math.floor(Math.random() * facts.length);
+
+              document.getElementById("fact-text").innerText = facts[activeFact];
+            </script>
+        </div>
+        <div class="aside-box">
+          <h3>socials</h3>
+          <span><a href="https://crosstalk.im/profile/+leefymoon"><img src="images/wlm-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a href="https://spacehey.com/leefymoon"><img src="images/spacehey-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a href="https://bsky.app/profile/leefymoon.bsky.social"><img src="images/bsky-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a rel="me" href="https://social.fort1nd.com/@leefyexplodes"><img src="images/forums-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a href="https://www.tumblr.com/blog/leefymoon"><img src="images/tumblr-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a href="https://discordapp.com/users/484765590511419403"><img src="images/discord-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a href="https://pin.it/2VPmTVtIq"><img src="images/pinterest-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+          <span><a href="https://steamcommunity.com/profiles/76561199156330743/"><img src="images/steam-icon.png"
+                width="" style="image-rendering: pixelated" /></a></span>
+          <span><a href="mailto://leefyexplodes@leefymoons-room.net"><img src="images/email-icon.png" width=""
+                style="image-rendering: pixelated" /></a></span>
+        </div>
+        <div class="aside-box">
+          <h3>join the server!</h3>
+          <p>join the discord server to get site updates, participate in game nights, and more!</p>
+          <button><a href="https://discord.gg/9EDwqsBf6G">join!</a></button>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <article id="4" class="blog-post mar26" style="text-align: left;">
+        <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
+        <h1>#4 // 3.16.26</h1>
+        <h2>the struggles of programming....</h2>
+        <p>ok. i love learning new things, but programming is a WHOLE different breed :sob: i took
+        discovering comp sci last year so i understand the basic of programming, but MAN is it terrifying to try
+        and actually put the pieces together... literally tried learning c++ and WHAT THE FUUUUCK i hate it!! was
+        it a bit bold for me to do with only being decent at javascript? yes absolutely! so now i'm gonna maybe
+        continue learning python from where i left off in comp sci last year... i did get a huge ass python book a
+        few months ago so maybe i should crack that open :p another thing is actually finding a project to work
+        on! like sure i have my website, but there's only soooo much i can do with it without having a backend
+        (which is scary). i'm sure i'll find something i'm interested in enough and start programming away, but
+        until then i am stuck sigh... ok goodbye for now :]
+        </p>
+      </article>
+      <article id="3" class="blog-post feb26" style="text-align: left;">
+        <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
+        <h1>#3 // 2.7.26</h1>
+        <h2>it my birthday <3</h2>
+        <p>it's that time again!! i'm getting older... :( but in all seriousness, i'm a bit happy because
+        i can drive now!! dunno exactly when i'll start learning tho lol.. but as for all things birthday
+        related, i have one thing i'd like to talk about :3 so a few weeks ago i was looking at zunes on ebay
+        while on call with my two friends (jarhead appreciation <3) and jarhead finds a good deal on an
+        untested one. so he sent me a gift card as a birthday present, so yippee! then fast forward a week
+        later, i get the zune... and its screen is broken :( but i know all was fair and square because i
+        mean it did say "untested" but now the struggle is finding a screen!! so far i've only found a
+        screen on alibaba out of all places... but jarhead might've found someone that has a screen so im
+        PRAYING. well anyway, it my birthday. i go celebrate n shit now. ok bye :p
+        </p>
+      </article>
+      <article id="2" class="blog-post jan26" style="text-align: left;">
+        <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
+        <h1>#2 // 1.9.26</h1>
+        <h2>i love ipods!! :3</h2>
+        <p>oh my beloved ipods... where do i start?? my interest in ipods came from no one other than
+        dankpods! (i know, how shocking...) BUT hear me out. i'm not like one of those retroslop elitests that
+        only like ipod because they're "old". i like ipods because i'm a nerd :3 that and streaming music isn't
+        really that great anymore... i love the designs of the different ipods, especially the numerous colors of
+        the ipod nanos *_* i actually have an ipod of my own! it a purple 4th gen nano (see in picture) and i LOVE
+        her!! i use her as a daily driver for school and basically anytime i leave the house. sure it's an 8gb
+        model, but she still gets the job done :]
+        </p>
+      </article>
+      <article id="1" class="blog-post dec25" style="text-align: left;">
+        <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
+        <h1>#1 // 12.21.25</h1>
+        <h2>my strange obsession with wii u games lately</h2>
+        <p>i always wanted a wii u when i was younger, but sadly to this day i still do not have one :( but
+        thank god for emulators! my friend has gotten me into playing super mario 3d world with her by remoting
+        into her pc and using cemu. while it's a bit of a hassle to do with her on linux, it's still quite fun
+        getting to play games that i wanted to play when i was younger. we've also been playing a lot of mario
+        kart 8 (which she kicks my ass in) and sometimes our friends join in! it did become unusable at one point
+        because cemu was being all screwy on her new install of linux, so she had to reinstall linux 2 or 3 times
+        T_T but i would say it was worth the struggle because now we can play pretty much any wii u game ^^
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>site made by yours truly :]</p>
+    </footer>
+  </div>
+  <script src="randomBanner.js"></script>
+  <script src="explodeClick.js"></script>
+</body>
+
+</html>

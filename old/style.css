@@ -1,0 +1,30 @@
+body {
+    background: url(images/background.gif);
+}
+
+* {
+    font-family: MS PGothic;
+    color: #fff!important;
+}
+
+#container {
+    background: black;
+    width: 640px!important;
+}
+
+#nav {
+    background-color: blueviolet;
+}
+
+#main {
+    background: url(images/tileBG.gif);
+}
+
+#main tr {
+    background: #000000;
+    margin-bottom: 10px;
+}
+
+#aboutme {
+    vertical-align: top!important;
+}
