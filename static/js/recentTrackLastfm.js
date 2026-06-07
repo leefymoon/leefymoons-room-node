@@ -19,14 +19,18 @@ async function getRecentTrack() {
             const artist = document.createElement('p');
             const song = document.createElement('p');
             const albumCover = document.createElement('img');
+            const infoSpan = document.createElement('span');
+            const date = document.createElement('small');
 
             albumCover.setAttribute("src", recentTrack[i].image.find(img => img.size === "large")?.['#text']);
             albumCover.style.width = '75px';
             song.textContent = recentTrack[i].name;
             artist.textContent = recentTrack[i].artist['#text'];
+            date.textContent = 'listened to at ' + recentTrack[i].date['#text'];
 
-            document.getElementById('lastfm').prepend(albumCover);
-            document.getElementById('track-info').append(artist, song);
+            infoSpan.append(artist, song);
+            document.getElementById('track-info').append(albumCover, infoSpan);
+            document.getElementById('lastfm').append(date);
         }
 
 

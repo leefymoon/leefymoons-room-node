@@ -498,9 +498,28 @@ article#whats-new {
     height: fit-content;
 }
 
-#new-interests {
-    margin: auto;
+#new-interests table {
+    border: none;
+    width: 300px!important;
+    margin-top: -10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
+#new-interests table p {
+    margin: 0;
+}
+
+#new-interests tr, td {
+    border: none;
+}
+
+#new-interests tr {
+    border-bottom: #8a2be2 dotted 3px;
+}
+
+#new-interests tr:last-child {
+    border-bottom: none;
 }
 
 .interest-child {
@@ -577,21 +596,49 @@ article#whats-new {
 
 .lastfm {
     text-align: center;
-    margin: 2px auto;
+    margin: 2px 0px;
     width: 325px;
     border: #8a2be2 4px outset;
     background: linear-gradient(#8a2be2 30%, #4a167a, #7326bc);
-    border-radius: 10px;
     box-shadow: inset 0px 0px 15px 5px #000000;
     padding: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: fit-content;
 }
 
-.lastfm img {
+.lastfm h2 {
+    font-size: 22px;
+}
+
+.lastfm small {
+    margin: 4px 0px;
+    color: #ffffff;
+}
+
+.track-info img {
     margin-right: 5px;
+}
+
+.track-info p {
+    margin: 4px 0px;
+}
+
+.track-info p:first-child {
+    margin-top: 0px;
+}
+
+.track-info span {
+    text-align: left;
+}
+
+.track-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
 }
 
 #about-article {
@@ -703,17 +750,11 @@ article#whats-new {
 
 table {
     color: #fff;
-    border: #8a2be2 5px solid;
     border-collapse: collapse;
     width: 48%!important;
     margin: 15px auto 0px;
     font-family: Ari W9500;
     font-size: 16px;
-}
-
-tr, th, td {
-    border: 2px solid #fff;
-    padding: 5px;
 }
 
 .blog-post h2 {
