@@ -1,0 +1,20 @@
+{% extends "templates/base.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block firstAside %}
+    {{ super() }}
+{% endblock %}
+
+{% block mainContent %}
+    {% for blogTitle, blogDate, blogContent in blogPosts | reverse %}
+    <article id="{{ loop.revindex }}" class="blog-post" style="text-align: left;">
+        <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
+        <h1>#{{ loop.revindex }} // {{ blogDate }}</h1>
+        <h2>{{ blogTitle }}</h2>
+        <p>
+        {{ blogContent }}
+        </p>
+      </article>
+    {% endfor %}
+{% endblock %}
