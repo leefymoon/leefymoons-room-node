@@ -9,36 +9,36 @@ async function getRecentTrack() {
         const data = await response.json();
         const recentTrack = data.recenttracks.track;
 
-        for (let i = 0; i < recentTrack.length; i++) {
-          
-            console.log(data);
-            console.log(recentTrack[i].name);
-            console.log(recentTrack[i].artist['#text']);
-            console.log(recentTrack[i].date['#text']);
-            
-            const artist = document.createElement('p');
-            const song = document.createElement('p');
-            const albumCover = document.createElement('img');
-            const infoSpan = document.createElement('span');
-            const date = document.createElement('small');
+        console.log(recentTrack);
 
-            albumCover.setAttribute("src", recentTrack[i].image.find(img => img.size === "large")?.['#text']);
-            albumCover.style.width = '75px';
-            song.textContent = recentTrack[i].name;
-            artist.textContent = recentTrack[i].artist['#text'];
-            date.textContent = 'listened to at ' + recentTrack[i].date['#text'];
+        const artist = document.createElement('p');
+        const song = document.createElement('p');
+        const albumCover = document.createElement('img');
+        const infoSpan = document.createElement('span');
+        const dateEle = document.createElement('small');
 
-            infoSpan.append(artist, song);
-            document.getElementById('track-info').append(albumCover, infoSpan);
-            document.getElementById('lastfm').append(date);
+        console.log(recentTrack.hasOwnProperty('nowplaying'));
+        
+        let date;
+        if (recentTrack[0]["@attr"]) {
+            date = 'track is now playing!';
+        }
+        else {
+            date = 'track listened to at ' + recentTrack[0].date['#text'];
         }
 
-
+        albumCover.setAttribute("src", recentTrack[0].image.find(img => img.size === "large")?.['#text']);
+        albumCover.style.width = '75px';
+        song.textContent = recentTrack[0].name;
+        artist.textContent = recentTrack[0].artist['#text'];
+        infoSpan.append(artist, song);
+        document.getElementById('track-info').append(albumCover, infoSpan);
+        dateEle.textContent = date;
+        document.getElementById('lastfm').append(dateEle);
+        
     } catch (error) {
         console.error('Error fetching data from your backend:', error);
     }
-
-
 }
 
 getRecentTrack();

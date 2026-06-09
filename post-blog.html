@@ -1,0 +1,22 @@
+{% extends "templates/base.html" %}
+
+{% block title %}home{% endblock %}
+
+{% block firstAside %}
+    {{ super() }}
+{% endblock %}
+
+{% block mainContent %}
+    <article>
+        <h1>posting a blog?</h1>
+        <form action="/submit-data" method="POST">
+            <label for="blogTitle"><p>blog title:</p></label>
+            <input type="text" id="blogTitle" name="blogTitle" required>
+            <label for="blogDate"><p>blog date:</p></label>
+            <input type="text" id="blogDate" name="blogDate" required>
+            <label for="blogContent"><p>blog content:</p></label>
+            <textarea id="blogContent" name="blogContent" rows="15" cols="80" placeholder="Type your long text here..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </article>
+{% endblock %}

@@ -1,75 +1,12 @@
-<!DOCTYPE html>
-<html>
+{% extends "templates/base.html" %}
 
-<head>
-  <link href="style.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="site-favicon.ico">
-  <base target="_blank">
-  <title>leefymoon's room / blog</title>
-</head>
+{% block title %}home{% endblock %}
 
-<body>
-  <div id="grid-container">
-    <header id="top">
-      <img src="banner1.png" id="banner">
-      <div id="banner-creds"></div>
-    </header>
-    <div class="marquee">
-      <div class="marquee-content">
-        <p>
-          javascript you are my ENEMY // graphics page is leaving soon... // that fuckin bird that i hate //
-        </p>
-      </div>
-      <div class="marquee-content">
-        <p>
-          javascript you are my ENEMY // graphics page is leaving soon... // that fuckin bird that i hate //
-        </p>
-      </div>
-    </div>
-    <nav>
-      <button><a href="home.html" target="_self">home</a></button>
-      <button><a href="about.html" target="_self">about</a></button>
-      <button><a href="blog.html" target="_self">blog</a></button>
-      <button><a href="graphics.html" target="_self">graphics</a></button>
-      <button><a href="resources.html" target="_self">resources</a></button>
-      <button><a href="shrines.html" target="_self">shrines</a></button>
-    </nav>
-    <aside>
-      <div class="aside-container">
-        <div class="aside-box" style="position: relative;">
-          <h3>did you know?</h3>
-            <p id="fact-text"></p>
-            <script src="facts.js"></script>
-        </div>
-        <div class="aside-box">
-          <h3>socials</h3>
-          <span><a href="https://crosstalk.im/profile/+leefymoon"><img src="images/wlm-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a href="https://spacehey.com/leefymoon"><img src="images/spacehey-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a href="https://bsky.app/profile/leefymoons-room.net"><img src="images/bsky-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a rel="me" href="https://social.fort1nd.com/@leefyexplodes"><img src="images/forums-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a href="https://www.tumblr.com/blog/leefymoon"><img src="images/tumblr-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a href="https://discordapp.com/users/484765590511419403"><img src="images/discord-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a href="https://pin.it/2VPmTVtIq"><img src="images/pinterest-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-          <span><a href="https://steamcommunity.com/profiles/76561199156330743/"><img src="images/steam-icon.png"
-                width="" style="image-rendering: pixelated" /></a></span>
-          <span><a href="mailto://leefyexplodes@leefymoons-room.net"><img src="images/email-icon.png" width=""
-                style="image-rendering: pixelated" /></a></span>
-        </div>
-        <div class="aside-box">
-          <h3>join the server!</h3>
-          <p>join the discord server to get site updates, participate in game nights, and more!</p>
-          <button><a href="https://discord.gg/9EDwqsBf6G">join!</a></button>
-        </div>
-      </div>
-    </aside>
-    <main>
+{% block firstAside %}
+    {{ super() }}
+{% endblock %}
+
+{% block mainContent %}
       <article id="6" class="blog-post apr26" style="text-align: left;">
         <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
         <h1>#6 // 4.11.26</h1>
@@ -182,12 +119,4 @@
         T_T but i would say it was worth the struggle because now we can play pretty much any wii u game ^^
         </p>
       </article>
-    </main>
-    <footer>
-      <p>site made by yours truly :]</p>
-    </footer>
-  </div>
-  <script src="randomBanner.js"></script>
-  <script src="explodeClick.js"></script>
-</body>
-</html>
+{% endblock %}
