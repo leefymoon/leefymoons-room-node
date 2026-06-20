@@ -1,7 +1,8 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
+var fs = require('fs');
 require('dotenv').config()
-const PORT = '80'
+const PORT = '5500'
 var app = express()
 
 const silly = nunjucks.configure('', {
@@ -41,6 +42,7 @@ app.set('view engine', 'html')
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("static/"));
+app.use('/admincrap/post-blog', express.static("../static/"));
 
 app.get('/home', (req, res) => {
   res.render('home.html')
@@ -50,23 +52,19 @@ app.get('/about', (req, res) => {
   res.render('about.html')
 })
 
-app.get('/blog', (req, res) => {
-  res.render('blog.html')
-})
-
-app.get('/post-blog', (req, res) => {
+app.get('/admincrap/post-blog', (req, res) => {
   res.render('post-blog.html')
 })
 
 const blogPosts = [];
 
-app.post('/submit-data', (req, res) => {
+app.post('/blog', (req, res) => {
   silly.opts.autoescape = false; 
   
   const newBlog = [req.body.blogTitle, req.body.blogDate, req.body.blogContent];
   blogPosts.push(newBlog);
 
-  res.render('test.html', { blogPosts: blogPosts});
+  res.render('blog.html', { blogPosts: blogPosts});
 
   silly.opts.autoescape = true; 
 });

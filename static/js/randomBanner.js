@@ -20,5 +20,5 @@ var bannerSplit = img[banner].split(";");
 
 //changes the src of banner element to the split string and the text of banner creds to the other half of split string
 //i hate making comments holy shit
-document.getElementById("banner").src = "images/" + bannerSplit[1] + ".png";
+document.getElementById("banner").src = "/images/" + bannerSplit[1] + ".png";
 document.getElementById("banner-creds").textContent = "made by " + bannerSplit[0];
