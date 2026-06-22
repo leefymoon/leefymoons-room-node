@@ -1,6 +1,6 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
-var fs = require('fs');
+var fs = require('fs/promises');
 require('dotenv').config()
 const PORT = '5500'
 var app = express()
@@ -52,21 +52,34 @@ app.get('/about', (req, res) => {
   res.render('about.html')
 })
 
+async function loadBlogs() {
+  try {
+    const blogsRaw = await fs.readFile('blogs.json', 'utf8');
+    const blogs = JSON.parse(blogsRaw);
+
+  } catch (error) {
+    console.error("Error reading or parsing file:", error);
+  }
+}
+
 app.get('/admincrap/post-blog', (req, res) => {
   res.render('post-blog.html')
 })
 
-const blogPosts = [];
+const blogs = require('./blogs.json')
 
-app.post('/blog', (req, res) => {
-  silly.opts.autoescape = false; 
-  
-  const newBlog = [req.body.blogTitle, req.body.blogDate, req.body.blogContent];
-  blogPosts.push(newBlog);
+app.get('/blog', (req, res) => {
+  silly.opts.autoescape = false;
 
-  res.render('blog.html', { blogPosts: blogPosts});
+  loadBlogs();
+  res.render('blog.html', { blogs: blogs});
 
   silly.opts.autoescape = true; 
+});
+
+app.get('/feed.xml', (req, res) => {
+  loadBlogs();
+  res.render('feed.xml', { blogs: blogs});
 });
 
 app.listen(PORT, () => {
