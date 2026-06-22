@@ -5,7 +5,7 @@ require('dotenv').config()
 const PORT = '5500'
 var app = express()
 
-const silly = nunjucks.configure('', {
+const njkConfig = nunjucks.configure('', {
   autoescape: true,
   express: app
 })
@@ -52,13 +52,20 @@ app.get('/about', (req, res) => {
   res.render('about.html')
 })
 
-async function loadBlogs() {
-  try {
-    const blogsRaw = await fs.readFile('blogs.json', 'utf8');
-    const blogs = JSON.parse(blogsRaw);
+async function writeNewBlog(x) {
+  const newBlog = x;
 
+  try {
+    const existingBlogs = await fs.readFile('./blogs.json', 'utf8');
+    const blogsParsed = JSON.parse(existingBlogs);
+
+    blogsParsed.unshift(newBlog);
+
+    await fs.writeFile('./blogs.json', JSON.stringify(blogsParsed, null, 2), 'utf8');
+    
+    console.log('woohoo it wrote to the JSON');
   } catch (error) {
-    console.error("Error reading or parsing file:", error);
+    console.error('error writing to the JSON:', error);
   }
 }
 
@@ -69,17 +76,31 @@ app.get('/admincrap/post-blog', (req, res) => {
 const blogs = require('./blogs.json')
 
 app.get('/blog', (req, res) => {
-  silly.opts.autoescape = false;
-
-  loadBlogs();
+  njkConfig.opts.autoescape = false;
   res.render('blog.html', { blogs: blogs});
-
-  silly.opts.autoescape = true; 
+  njkConfig.opts.autoescape = true; 
 });
 
 app.get('/feed.xml', (req, res) => {
-  loadBlogs();
   res.render('feed.xml', { blogs: blogs});
+});
+
+app.post('/submit-blog', (req, res) => {
+  const id = blogs.length + 1;
+  console.log(id);
+
+  const currentDate = new Date();
+
+  const newBlog = {
+    id: id,
+    title: req.body.title,
+    date: req.body.date,
+    rssDate: currentDate.toUTCString(),
+    content: req.body.content
+  };
+
+  writeNewBlog(newBlog);
+  res.redirect("/blog");
 });
 
 app.listen(PORT, () => {

@@ -9,13 +9,13 @@
 {% block mainContent %}
     <article>
         <h1>posting a blog?</h1>
-        <form action="/blog" method="POST">
-            <label for="blogTitle"><p>blog title:</p></label>
-            <input type="text" id="blogTitle" name="blogTitle" required>
-            <label for="blogDate"><p>blog date:</p></label>
-            <input type="text" id="blogDate" name="blogDate" required>
-            <label for="blogContent"><p>blog content:</p></label>
-            <textarea id="blogContent" name="blogContent" rows="15" cols="80" placeholder="Type your long text here..."></textarea>
+        <form action="/submit-blog" method="POST">
+            <label for="title"><p>blog title:</p></label>
+            <input type="text" id="title" name="title" required>
+            <label for="date"><p>blog date:</p></label>
+            <input type="text" id="date" name="date" required>
+            <label for="content"><p>blog content:</p></label>
+            <textarea id="content" name="content" rows="15" cols="80" placeholder="Type your long text here..."></textarea>
             <button type="submit">Submit</button>
         </form>
     </article>

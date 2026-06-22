@@ -6,7 +6,7 @@
         <title>#{{ blogPost.id }} // {{ blogPost.title }}</title>
         <link>https://leefymoons-room.net/blog.html#{{ blogPost.id }}</link>
         <guid isPermaLink="true">https://leefymoons-room.net/blog.html#{{ blogPost.id }}</guid>
-        <pubDate>{{ blogPost.date }}</pubDate>
+        <pubdate>{{ blogPost.rssDate }}</pubDate>
     </item>
     {% endfor %}
 {% endblock %}
