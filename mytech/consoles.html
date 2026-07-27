@@ -1,175 +1,122 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="../style.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="../site-favicon.ico"/>
-    <base target="_blank" />
-    <title>leefymoon's room / home</title>
-  </head>
-  <body>
-    <div id="grid-container">
-      <header id="top">
-        <img src="../images/banner1.png" id="banner">
-        <div id="banner-creds"></div>
-      </header>
-      <div class="marquee">
-        <div class="marquee-content">
-          <p>
-            javascript you are my ENEMY // graphics page is leaving soon... // that fuckin bird that i hate //
-          </p>
-        </div>
-        <div class="marquee-content">
-          <p>
-            javascript you are my ENEMY // graphics page is leaving soon... // that fuckin bird that i hate //
-          </p>
-        </div>
-      </div>
-      <nav>
-        <button><a href="../home.html" target="_self">home</a></button>
-        <button><a href="../about.html" target="_self">about</a></button>
-        <button><a href="../blog.html" target="_self">blog</a></button>
-        <button><a href="../mytech.html" target="_self">my tech</a></button>
-        <button><a href="../resources.html" target="_self">resources</a></button>
-        <button><a href="../shrines.html" target="_self">shrines</a></button>
-      </nav>
-      <aside>
-        <div class="aside-container">
-          <div class="aside-box">
-            <h3>did you know?</h3>
-            <p id="fact-text"></p>
-            <script src="../facts.js"></script>
-          </div>
-          <div class="aside-box">
-            <h3>socials</h3>
-            <span
-              ><a href="https://crosstalk.im/profile/+leefymoon"
-                ><img
-                src="../images/wlm-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="https://spacehey.com/leefymoon"
-              ><img
-                src="../images/spacehey-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="https://bsky.app/profile/leefymoons-room.net"
-                ><img
-                src="../images/bsky-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a rel="me" href="https://social.fort1nd.com/@leefyexplodes"
-                ><img
-                src="../images/forums-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="https://www.tumblr.com/blog/leefymoon"
-                ><img
-                src="../images/tumblr-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="https://discordapp.com/users/484765590511419403"
-                ><img
-                src="../images/discord-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="https://pin.it/2VPmTVtIq"
-                ><img
-                src="../images/pinterest-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="https://steamcommunity.com/profiles/76561199156330743/"
-                ><img
-                src="../images/steam-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-            <span
-              ><a href="mailto://leefyexplodes@leefymoons-room.net"
-                ><img
-                src="../images/email-icon.png"
-                width=""
-                style="image-rendering: pixelated" /></a
-            ></span>
-          </div>
-        <div class="aside-box">
-          <h3>join the server!</h3>
-          <p>join the discord server to get site updates, participate in game nights, and more!</p>
-          <button><a href="https://discord.gg/9EDwqsBf6G">join!</a></button>
-        </div>
-        </div>
-      </aside>
-      <main>
-          <article>
-            <h1>pick a category!</h1>
-            <div class="tech-category">
-                <h2>PCs &gt;&gt;</h2>
-                <hr>
-                <p>4 devices &#8226; these poor things have been extremely abused</p>
+{% extends "templates/base.html" %}
+
+{% block title %}consoles{% endblock %}
+
+{% block firstAside %}
+    {{ super() }}
+{% endblock %}
+
+{% block mainContent %}
+          <article class="tech-article" id="xbox360">
+            <h1>the poverty 360</h1>
+            <h2 style="margin-bottom: 10px;">no rgh? *cries in a corner*</h2>
+            <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
+              <img src="/images/xbox360.jpg" style="margin: auto;">
             </div>
-            <div class="tech-category">
-                <h2>MP3 Players &gt;&gt;</h2>
-                <hr>
-                <p>3 devices &#8226; music so good i gotta have devices just for it</p>
-            </div>
-            <div class="tech-category">
-                <h2>Consoles &gt;&gt;</h2>
-                <hr>
-                <p>5 devices &#8226; do you even game bro?</p>
-            </div>
-            <div class="tech-category">
-                <h2>Other &gt;&gt;</h2>
-                <hr>
-                <p>3 devices &#8226; these are cool but they don't fit in a category lol</p>
-            </div>
+            <p>
+            oh my sweet boy. this xbox is an xbox 360 E. which was the 360 released right before the xbox one... it
+            also has a winchester mobo, meaning it cannot be hardmodded. how sad. oh but how i LOVED this thing... 
+            that is until it started overheating anytime i tried using it. so it sat unused for YEARS until 2025 when
+            i decided to take it apart with my father. we changed the thermal paste and thought all would be fine and 
+            dandy. but! of course not. it still overheat so i gave up, yet again.
+            </p>
+            <p>
+            that leads us into january 2026. i was chatting with my friends as one does and somehow the xbox 360 came up.
+            i remembered that my xbox 360 was just sitting collecting dust. i decided to just bite the bullet and open it 
+            up again! what do i discover? nothing. it seemed fine! new thermal paste and everything! that was until i turned 
+            it one without its case. its fan wasn't working! after all these years i had thought the fan was completely out 
+            of the question, but nope! so i ordered a new fan and all worked just fine! (still mad at myself for that one...)
+            </p>
+            <p>
+            now it has been infected with badavatar and it sits next to my monitors!
+            </p>
+            <button onclick="show('2ds')"><p>&lt; prev</p></button>
+            <button onclick="show('xboxone')"><p>next &gt;</p></button>
           </article>
-      </main>
-      <footer>
-        <p>site made by yours truly :]</p>
-      </footer>
-    </div>
-    <script src="../explodeClick.js"></script>
-    <script>
-      //smh... i know there's an easier way to do this, but meeeehhhhh
+          <article class="tech-article" id="xboxone" style="display: none;">
+            <h1>xbox one s</h1>
+            <h2 style="margin-bottom: 10px;">the xbox one s(hit edition)</h2>
+            <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
+              <img src="/images/xboxone.jpg" style="margin: auto;">
+            </div>
+            <p>this console was with me since 2017. this thing got me through all of the hard times up until it <b>was</b>
+            the hard time. i got it for xmas in 2017 and i LOVED it. i played minecraft and roblox nearly everyday with my 
+            friend. as i grew old i played less and less, but never abandoned gaming completely.
+            </p>
+            <p>
+            fast forward to june-ish 2025, the xbox starts acting funny. immediately i knew, this thing is finally on its 
+            death bed. now by this point i was basically over console gaming and i had started gaming on my father's pc. like 
+            i predicted, the xbox started slowly bootting up more and more, until the point to when it would boot up it wouldn't
+            even load the screen for my account pin. it even managed to corrupt some part of the xbox and i had to factory reset 
+            it! this is when i knew i had to let it go. so i said my goodbyes and swore to never use it again. then shortly after 
+            my father gave me his pc, so thank you for your sacrifice xbox.
+            </p>
+            <button onclick="show('xbox360')"><p>&lt; prev</p></button>
+            <button onclick="show('wii')"><p>next &gt;</p></button>
+          </article>
+          <article class="tech-article" id="wii" style="display: none;">
+            <h1>wii</h1>
+            <h2 style="margin-bottom: 10px;">fuck it wii ball</h2>
+            <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
+              <img src="/images/wii.jpg" style="margin: auto;">
+            </div>
+            <p>
+            this fucker. i honestly have no clue how this thing is still working because it's barely gotten a break 
+            since 2008. but, i have many good memories with it. one of my favorite things to play on the wii was just 
+            dance 2, 3, AND 4. i also loved to fuck around with the photos on the sd card :kek: it is still full of 
+            crazy ass miis and now homebrew! the only thing i do on it now is play wii fit with my friends and get my ass 
+            beat in mario kart lol
+            </p>
+            <button onclick="show('xboxone')"><p>&lt; prev</p></button>
+            <button onclick="show('2ds')"><p>next &gt;</p></button>
+          </article>
+          <article class="tech-article" id="2ds" style="display: none;">
+            <h1>2ds</h1>
+            <h2 style="margin-bottom: 10px;">oh you poor freak why was i so evil</h2>
+            <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
+              <img src="/images/2ds.jpg" style="margin: auto;">
+            </div>
+            <p>
+            this is my 2ds, what a damn freaky lookin thing this was... my fondest memories on this thing was playing mario 
+            maker and fucking FACE RAIDERS out of all things :kek: but despite it being the poverty model, it treated me quite well!
+            </p>
+            <p>
+            a funny thing that happened when i was a wee lad, mc for the <i>new</i> 3ds came out and i did not know that it
+            was exclusive to the new 3ds... so being in the age of physical media, i bugged my parents to bring me to walmart to get it!
+            we get to walmart and get it, i get home and that's when everything fell apart. obviously it did NOT work on my 2ds
+            but instead of telling my parents, i just lied?? idk lol i was a strange kid.
+            </p>
+            <p>
+            as of now, it sits on my shelf and i use it every now and then to take pictures and vids for funni :3
+            i finally modded it in like. 2024 and i like playing tomodachi life on it (and other various from the hshop).
+            i remember bringing it to see weird al in summer of 2025 with my friend and i actually think i got two
+            streetpasses?? either way, my 2ds is a funky little dude and i love him dearly
+            </p>
+            <button onclick="show('wii')"><p>&lt; prev</p></button>
+            <button onclick="show('xbox360')"><p>next &gt;</p></button>
+          </article>
+          <script>
+      function show(elementID) {
+         // find the requested page and alert if it's not found
+        const ele = document.getElementById(elementID);
+        if (!ele) {
+          alert("no such element");
+          return;
+        }
 
-      //script for random banners :yippee:
-      //array in "banner creator";"image name" format
-      var img = [
-        "leefy;banner1",
-        "bespoke;banner2",
-        "zookajoe;banner3",
-        "hunter;banner4",
-        "epicness;banner5",
-        "li;banner6",
-        "ryni;banner7",
-        "cozmo;banner8",
-        "jarhead;banner9"
-      ];
+        // get all pages, loop through them and hide them
+        const pages = document.getElementsByClassName('tech-article');
+        for (let i = 0; i < pages.length; i++) {
+          pages[i].style.display = 'none';
+        }
 
-      //randomly picks a string
-      banner = Math.floor(Math.random() * img.length);
-
-      //splits the picked string into image name and creator name
-      var bannerSplit = img[banner].split(";");
-
-      //changes the src of banner element to the split string and the text of banner creds to the other half of split string
-      //i hate making comments holy shit
-      document.getElementById("banner").src = "../images/" + bannerSplit[1] + ".png";
-      document.getElementById("banner-creds").textContent = "made by " + bannerSplit[0];
+        // then show the requested page
+        ele.style.display = 'block';
+        const y = document.getElementById('aside-contain').getBoundingClientRect().top + window.scrollY;
+        window.scroll({
+          top: y,
+          behavior: 'smooth'
+        });
+      }
     </script>
-    <script src="../pwease.js"></script>
-  </body>
-</html>
+{% endblock %}

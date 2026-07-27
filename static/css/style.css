@@ -34,6 +34,7 @@ p {
     color: #fff;
     font-size: 18px;
     font-family: Ari W9500;
+    line-height: 23px;
 }
 
 a {
@@ -649,6 +650,7 @@ article#whats-new {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .about-subinfo-container {
@@ -722,7 +724,7 @@ article#whats-new {
 }
 
 .album-item p {
-    font-size: 10px!important;
+    font-size: 12px!important;
     margin: 2px 0;
 }
 
@@ -762,7 +764,7 @@ table {
 }
 
 .tech-category {
-    background: url(../images/blogTileBG.gif);
+    background: url(/images/blogTileBG.gif);
     border: #8a2be2 2px solid;
     box-shadow: inset 0px 0px 4px 1px #8a2be2;
     height: fit-content;
@@ -773,6 +775,35 @@ table {
 
 .tech-category h2 {
     font-size: 40px!important;
+}
+
+.tech-category a {
+    text-decoration: none;
+}
+
+.tech-article button {
+    border: #8a2be2 5px outset;
+    background: linear-gradient(#8a2be2 30%, #4a167a, #7326bc);
+}
+
+.tech-article button:hover {
+    border: #8a2be2 5px inset;
+    background: linear-gradient(#6e23b5 30%, #310f51, #5b1e95);
+}
+
+.tech-article table {
+    color: #fff;
+    border: #8a2be2 5px solid;
+    border-collapse: collapse;
+    width: 48%!important;
+    margin: 15px auto 0px;
+    font-family: Ari W9500;
+    font-size: 16px;
+}
+
+.tech-article tr, .tech-article th, .tech-article td {
+    border: 2px solid #fff;
+    padding: 5px;
 }
 
 .graphics-nav {
@@ -841,7 +872,6 @@ table {
     width: auto;
     background-color: #000000;
     box-shadow: inset 0px 0px 4px 1px #8a2be2;
-    border-radius: 10px;
     border: #6e23b5 3px solid;
     height: fit-content;
     margin: 5px 5px;
@@ -851,10 +881,12 @@ table {
 
 .resource a {
     font-family: Ari W9500;
+    font-size: 25px;
 }
 
 .resource p {
     margin: 0;
+    margin-top: 5px;
 }
 
 #shrines {

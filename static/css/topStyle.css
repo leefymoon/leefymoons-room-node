@@ -1,5 +1,5 @@
 body {
-    background: url(images/topbackground.jpg) fixed;
+    background: url(/images/topImages/topbackground.jpg) fixed;
     background-size: 500px;
     font-family: Martian Mono;
     padding: 0;
@@ -11,7 +11,7 @@ body {
 
 @font-face {
     font-family: Martian Mono;
-    src: url("Martian\ Mono.ttf");
+    src: url("/fonts/Martian\ Mono.ttf");
 }
 
 * {
