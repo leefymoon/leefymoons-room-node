@@ -8,8 +8,7 @@
 
 {% block mainContent %}
     {% for blogPost in blogs %}
-    <article id="{{ blogPost.id }}" class="blog-post" style="text-align: left;">
-        <a href="https://leefymoons-room.net/feed.xml"><img src="images/rss-icon.png" style="position: absolute;top: 0;right: 0;margin: 20px;"></a>
+    <article id="{{ blogPost.id }}" class="blog-post" style="text-align: left;">  
         <h1>#{{ blogPost.id }} // {{ blogPost.date }}</h1>
         <h2>{{ blogPost.title }}</h2>
         <p>

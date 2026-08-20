@@ -319,7 +319,7 @@ nav button:hover {
 
 nav button a {
     display: block;
-    width: 100%;
+    width: fit-content;
     height: 100%;
 }
 
