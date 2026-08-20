@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "npm start",
+    "start": "node -r dotenv/config app.js",
     "dev": "nodemon -e js,json,html,env,css app.js"
   },
   "dependencies": {
